@@ -1,0 +1,111 @@
+<% if logged_in? %>
+  
+  <div class="row">
+      <div class="category">
+        <div class="col-md-3 col-md-offset-1 col-sm-6 col-xs-12">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h1>交通</h1>
+              <h3>Traffic</h3>
+              <%= form_for(@vote) do |f| %>
+              <%= hidden_field_tag :category, 'koutsu' %>
+              <%= f.submit '投票', class: 'btn btn-success' %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="category">
+      <div class="col-md-3 col-md-offset-1 col-sm-6 col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h1>税金問題</h1>
+            <h3>Tax</h3>
+            <%= form_for(@vote) do |f| %>
+            <%= hidden_field_tag :category, 'zeikin' %>
+            <%= f.submit '投票', class: 'btn btn-success' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="category">
+      <div class="col-md-3 col-md-offset-1 col-sm-6 col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h1>環境問題</h1>
+            <h3>Environment</h3>
+            <%= form_for(@vote) do |f| %>
+            <%= hidden_field_tag :category, 'kankyo' %>
+            <%= f.submit '投票', class: 'btn btn-success' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="category">
+      <div class="col-md-3 col-md-offset-1 col-sm-6 col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h1>年金</h1>
+            <h3>Pension</h3>
+            <%= form_for(@vote) do |f| %>
+            <%= hidden_field_tag :category, 'nenkin' %>
+            <%= f.submit '投票', class: 'btn btn-success' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="category">
+      <div class="col-md-3 col-md-offset-1 col-sm-6 col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h1>就労問題</h1>
+            <h3>Jobs</h3>
+            <%= form_for(@vote) do |f| %>
+            <%= hidden_field_tag :category, 'shigoto' %>
+            <%= f.submit '投票', class: 'btn btn-success' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="category">
+      <div class="col-md-3 col-md-offset-1 col-sm-6 col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h1>教育</h1>
+            <h3>Education</h3>
+            <%= form_for(@vote) do |f| %>
+            <%= hidden_field_tag :category, 'kyoiku' %>
+            <%= f.submit '投票', class: 'btn btn-success' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% else %>
+<div class="center jumbotron">
+  <div class="text-center">
+    <h1>i.demand</h1>
+  <br>
+  <br>
+  <br>
+  <br>
+  <%= link_to 'Sign up', signup_path, class: 'btn btn-lg btn-success' %>
+  </div>
+</div>
+<% end %>
