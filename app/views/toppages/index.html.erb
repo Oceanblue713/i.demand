@@ -1,6 +1,14 @@
 <% if logged_in? %>
-  
-  <div class="row">
+  <% if current_user.vote %>
+    <h1 class="text-center">投票済みです。</h1>
+    <h3 class="text-center">ランキングページへ移動して下さい。</h3>
+    <br>
+    <br>
+    <div class="text-center">
+    <%= link_to 'ランキングページへ', rankings_path, class: 'btn btn-warning btn-lg' %>
+    </div>
+  <% else %>
+    <div class="row">
       <div class="col-md-3 col-md-offset-1 col-sm-6 col-xs-12">
         <div class="panel panel-default">
           <div class="panel-body">
@@ -39,8 +47,6 @@
       </div>
     </div>
   </div>
-  
-  
   <div class="row">
       <div class="col-md-3 col-md-offset-1 col-sm-6 col-xs-12">
         <div class="panel panel-default">
@@ -85,12 +91,15 @@
   <div class="col-md-6 col-md-offset-5 col-sm-6 col-xs-11"> 
   <%= link_to 'ランキングページへ', rankings_path, class: 'btn btn-lg btn-warning' %>
   </div>
+  <% end %>
 <% else %>
 <div class="center jumbotron">
   <div class="text-center">
     <h1>i.demand</h1>
   <br>
   <br>
+  <p class="text-primary">この中で、何が１番気になる？今、興味のあることに投票しよう！</p><br>
+  <p class="text-primary">あなたの一票で何かが変わるかも？</p>
   <br>
   <br>
   <%= link_to 'Sign up', signup_path, class: 'btn btn-lg btn-success' %>
