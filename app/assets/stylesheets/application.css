@@ -8,17 +8,14 @@ body {
   background-color: #ffffff;
 }
 
-.category .panel-body {
+.category {
   height: 200px;
 }
+
+.box{
+  float: left;
+}
+
 .category .panel-heading {
   height: 250px;
-}
-
-.category.h1 {
-  text-align: center;
-}
-
-.category .panel panel- {
-  float: left;
 }

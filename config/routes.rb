@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create]
   
   resources :votes, only: [:create]
+  
+  resources :rankings, only: [:index]
 end
