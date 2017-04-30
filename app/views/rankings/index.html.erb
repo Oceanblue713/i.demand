@@ -1,16 +1,14 @@
 <h1 class="text-center bg-primary"><strong>＊ランキング＊</strong></h1>
 <br>
 <br>
-<%if @votes.present? %>
+
   <div class="row">
       <div class="col-md-3 col-md-offset-1 col-sm-6 col-xs-12">
         <div class="panel panel-default">
           <div class="panel-body">
             <h1 class="text-center">交通</h1>
             <h3 class="text-center">Traffic</h3>
-            
-            
-            
+            <h2 class="text-center"><%= @rankings["koutsu"] %>票</h2> 
           </div>
         </div>
       </div>
@@ -19,8 +17,7 @@
           <div class="panel-body">
             <h1 class="text-center">税金問題</h1>
             <h3 class="text-center">Tax</h3>
-            
-            
+            <h2 class="text-center"><%= @rankings["zeikin"] %>票</h2>
           </div>
         </div>
       </div>
@@ -29,9 +26,7 @@
           <div class="panel-body">
             <h1 class="text-center">環境問題</h1>
             <h3 class="text-center">Environment</h3>
-            
-            
-            
+            <h2 class="text-center"><%= @rankings["kankyo"] %>票</h2>
           </div>
         </div>
       </div>
@@ -44,9 +39,7 @@
           <div class="panel-body">
             <h1 class="text-center">年金</h1>
             <h3 class="text-center">Pension</h3>
-            
-            
-            
+            <h2 class="text-center"><%= @rankings["nenkin"] %>票</h2>
           </div>
         </div>
       </div>
@@ -55,9 +48,7 @@
           <div class="panel-body">
             <h1 class="text-center">就労問題</h1>
             <h3 class="text-center">Jobs</h3>
-            
-            
-            
+            <h2 class="text-center"><%= @rankings["shigoto"] %>票</h2>
           </div>
         </div>
       </div>
@@ -66,9 +57,7 @@
           <div class="panel-body">
             <h1 class="text-center">教育</h1>
             <h3 class="text-center">Education</h3>
-            
-            
-            
+            <h2 class="text-center"><%= @rankings["kyoiku"] %>票</h2>
           </div>
         </div>
       </div>
@@ -78,4 +67,3 @@
   <div class="text-center">
   <%= link_to 'ログアウトする', logout_path, method: :delete, class: 'btn btn-lg btn-warning' %>
   </div>
-<% end %>

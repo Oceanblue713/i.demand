@@ -1,6 +1,6 @@
 class RankingsController < ApplicationController
   def index
-    @ranking_counts = Vote.ranking
-    @votes = Vote.find(@ranking_counts)
+    @votes = Vote.find(Vote.group(:category).order('count(category) desc').pluck(:id))
+    @rankings = Vote.group(:category).order('count(category) desc').count(:category)
   end
 end
